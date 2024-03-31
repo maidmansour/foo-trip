@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Available Destination{% endblock %}
+
+{% block body %}
+
+
+<div class="row">
+    <div class="d-flex gap-2">
+        <h1 class="mb-2">Foo-Trip ! ✅</h1>
+        <h6><a href= {{ path('app_login') }}>Login</a></h6>
+    </div>
+
+    Available Destinations:
+    <ul class="list-group list-group-horizontal">
+        {% for destination in destinations %}
+        <li class="list-group-item"><h3 class="mb-2"><a href="{{ path ('home.detail', {'id': destination.id }) }}">{{ destination.name }}</a></h3>
+            <p><img src="/images/destinations/{{ destination.image }}" width="200" hieght="50" class="mt-2"></p>
+            <p class="mt-2">{{ destination.description}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    
+</div>
+{% endblock %}

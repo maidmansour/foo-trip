@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Destination{% endblock %}
+
+{% block body %}
+
+
+<div class="row">
+    <div class="d-flex gap-2">
+        <h1 class="mb-2">Foo-Trip ! ✅</h1>
+        <h6><a href= {{ path('app_logout') }}>Logout</a></h6>
+    </div>
+
+    <span class="mb-2">Create New Destination</span>
+    {{ form(form) }}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Destination{% endblock %}
+
+{% block body %}
+    <h1 class="mb-4">Destination Detail</h1><span><a href={{ url ('app_home' )}}>Back To List</a>
+    <p><img src="/images/destinations/{{ destination.image }}" width="600" hieght="200" class="mt-2"/></p>
+    <h2>{{ destination.name }}</h2>
+    <p>{{ destination.description }}</p>
+    <h4> Duration : {{ destination.duration }} day(s)</h4>
+    <h4> Price : {{ destination.price }} Euro </h4>
+{% endblock %}
